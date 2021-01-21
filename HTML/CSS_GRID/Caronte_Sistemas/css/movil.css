@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+div#container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+    ;
+}
+
+div#container > header{
+    grid-area: header;
+    background-color:rgb(0, 0, 0) ;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 0.5fr 2fr 3fr;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+        "social social social"
+        "logo titulo menu"
+        "navpr navpr navpr"
+    ;
+}
+
+div#container header nav#contactos{
+    display: none;
+}
+
+div#container header nav#sociales{
+    grid-area: social;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div#container header nav#sociales a{
+    font-size: 20pt;
+    color: black;
+    text-decoration: none;
+}
+
+div#container header div#logo{
+    grid-area: logo;
+    justify-self: center;
+    align-self: center;
+}
+
+
+div#container header h1{
+    grid-area: titulo;
+    color: white;
+    justify-self: left;
+    align-self: center;
+}
+
+
+div#container header a#navicon{
+    grid-area: menu;
+    justify-self: center;
+    align-self: center;
+    font-size: 28pt;
+    color: white;
+}
+
+div#container header nav#principal{
+    grid-area: navpr;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    padding: 5px;
+}
+
+div#container header nav#principal a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    font-family: unlock;
+    font-size: 14pt;
+    text-indent: 5px;
+    display: flex;
+    align-items: center;
+}
+
+div#container header nav#principal i{
+    display: none;
+}
+
+div#container main{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+}
+
+div#container main header{
+    background-color: orange;
+}
+
+div#container main section{
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+}
+
+div#container main section article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "logo2 titulo2"
+    "logo2 descripcion"
+    ;
+}
+
+div#container main section article img{
+    grid-area: logo2;
+}
+
+div#container main section article div h2{
+    grid-area: titulo2;
+}
+
+div#container main section article div p{
+    grid-area: descripcion;
+}
